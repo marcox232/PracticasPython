@@ -90,3 +90,13 @@ pattern = r"\bcasa\b"
 
 result = re.findall(pattern,texto)
 print(result)
+
+#|
+#Este permite agregar mas de una opcion en la validacion en general es un OR
+
+texto = "Sandia, Platano, Aguacate, Pera, Palta"
+pattern = r"Palta|Aguacate"
+
+result = re.findall(pattern,texto)
+
+print(result)
