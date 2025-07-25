@@ -20,3 +20,15 @@ if response.status_code == 200:
     
     if resultados:
         print(f"El precio del producto {resultados.group(1)}")
+        
+
+from bs4 import BeautifulSoup
+import requests
+
+url = 'https://www.apple.com/mx/shop/buy-mac/macbook-air'
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    print("Extraccion correcta")
+    sopa = BeautifulSoup(response.text,'html.parser')
